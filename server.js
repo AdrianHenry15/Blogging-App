@@ -2,6 +2,7 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
+const ms = require('ms');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -14,6 +15,7 @@ const sess = {
     cookie: {},
     resave: false,
     saveUninitialized: true,
+    // maxAge: ms('2hr'),
     store: new SequelizeStore({
         db: sequelize
     })
