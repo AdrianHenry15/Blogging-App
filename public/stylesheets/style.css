@@ -121,6 +121,43 @@ p {
     box-shadow: 6px 5px var(--light-dark);
 }
 
+#dashboard-link {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+#dashboard-link:hover {
+    background-color: var(--light-dark);
+    border-radius: var(--border-radius);
+    display: inline-block;
+    padding: 0 10px;
+}
+
+#login:hover {
+    background-color: var(--light-dark);
+    border-radius: var(--border-radius);
+    display: inline-block;
+}
+
+li {
+    margin: 0 0 20px 0;
+    border: 3px solid var(--dark);
+    border-radius: var(--border-radius);
+}
+
+.post {
+    color: var(--primary);
+    background-color: var(--dark);
+    padding: 1%;
+    border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
+}
+
+.meta {
+    margin: 0 0 20px 0;
+    border: 3px solid var(--dark);
+    border-radius: var(--border-radius);
+}
+
 .list-group {
     padding: 0;
     list-style: none;
