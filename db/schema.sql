@@ -1,0 +1,3 @@
+Drop DATABASE IF EXISTS blob_db;
+
+CREATE DATABASE blob_db;
