@@ -1,6 +1,10 @@
+// express.js connection
 const router = require('express').Router();
 const sequelize = require('../config/connection');
+// models imported
 const { Post, User, Comment } = require('../models');
+
+// authorization helper
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, (req, res) => {

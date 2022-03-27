@@ -75,6 +75,31 @@ router.post('/', (req, res) => {
         });
 });
 
+router.post('/signup', (req, res) => {
+    // create method
+    // expects { username: 'Adrian', email: 'adrian@adrian.com', password: 'password123'}
+    User.create({
+        username: req.body.username,
+        email: req.body.email,
+        password: req.body.password
+    })
+        // send user data back to the client as confirmation and save session
+        .then(dbUserData => {
+            req.session.save(() => {
+                req.session.user_id = dbUserData.id;
+                req.session.username = dbUserData.username;
+                req.session.loggedIn = true;
+
+                res.json(dbUserData);
+            });
+        })
+        // if server error, return error
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err)
+        });
+});
+
 router.post('/login', (req, res) => {
     // expects {email: 'lernantino@gmail.com', password: 'password1234'}
     User.findOne({
