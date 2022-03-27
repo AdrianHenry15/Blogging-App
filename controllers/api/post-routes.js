@@ -1,11 +1,6 @@
 const router = require('express').Router();
 const { Post, User, Comment } = require('../../models');
 
-// sequelize database
-const sequelize = require('../../config/connection');
-// authorization helper
-const withAuth = require('../../utils/auth');
-
 // get all users
 router.get('/', (req, res) => {
     console.log('======================');
@@ -16,10 +11,6 @@ router.get('/', (req, res) => {
             'title',
             'created_at',
         ],
-        // order from most recent to least recent
-        order: [['created_at', 'DESC']],
-        // Include comment table and all comments
-        // include user table and post creator's username
         include: [
             {
                 model: Comment,
@@ -99,9 +90,7 @@ router.post('/', (req, res) => {
 
 router.put('/:id', (req, res) => {
     Post.update(
-        {
-            title: req.body.title
-        },
+        req.body,
         {
             where: {
                 id: req.params.id
