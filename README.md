@@ -22,10 +22,11 @@ The following necessary dependencies must be installed to run the applications:
 - Deployed on Heroku
 - Visit the website on Heroku 
 - Create an account and scroll through the webpage.
-- Link: 
+### Link: 
+- https://rocky-wave-46848.herokuapp.com/
 # Tests
 ## The following is needed to run the test: 
-- A Browser of your choice
+- The Browser of your choice (Firefox, Safari, Google Chrome, Internet Explorer, Microsoft Edge)
 # Questions
 If you have any questions about the repo, open an issue or contact me on GitHub at adrianhenry15 or contact my email
 address at adrianhenry2115@gmail.com
