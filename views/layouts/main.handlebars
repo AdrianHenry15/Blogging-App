@@ -11,18 +11,21 @@
     <title>Blob</title>
 </head>
 
-<body class="flex-column min-100-vh">
+<body class="wrapper flex-column min-100-vh">
     <header class="hero">
+        <nav>
+            {{#if loggedIn}}
+            <a id="home" href="/">Home</a>
+            <a id="dashboard" href="/dashboard">Dashboard</a>
+            <a id="logout" href="/login">Logout</a>
+            {{else}}
+            <a id="login" href="/login">Login</a>
+            <a id="sign-up" href="/signup">Sign-up</a>
+            {{/if}}
+        </nav>
         <h1 class="app-title">
             <a id="dashboard-link" href="/"> Blob</a>
         </h1>
-        <nav>
-            {{#if loggedIn}}
-            <button id="logout" class="btn">logout</button>
-            {{else}}
-            <a id="login" href="/login">login</a>
-            {{/if}}
-        </nav>
     </header>
 
     <main>
@@ -32,7 +35,6 @@
         Thanks for visiting!
     </footer>
     </div>
-
     {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>
     {{/if}}

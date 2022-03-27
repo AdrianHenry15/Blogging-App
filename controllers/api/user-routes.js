@@ -104,6 +104,43 @@ router.post('/login', (req, res) => {
     });
 });
 
+// router.post('/signup', (req, res) => {
+//     // expects {username: 'Poop' email: 'lernantino@gmail.com', password: 'password1234'}
+//     User.findAll({
+//         where: {
+//             username: req.body.username,
+//             email: req.body.email
+//         }
+//     }).then(dbUserData => {
+//         if (dbUserData) {
+//             req.render('login')
+//         } else {
+//             new User({
+//                 email: req.body.email
+//             }).save()
+//         }
+//         res.json(dbUserData)
+//             .catch(err => {
+//                 console.log(err);
+//                 res.status(500).json(err);
+//             });
+
+//         const validPassword = dbUserData.checkPassword(req.body.password);
+
+//         if (!validPassword) {
+//             res.status(400).json({ message: 'This is not a valid password.' });
+//             return;
+//         }
+
+//         req.session.save(() => {
+//             req.session.username = dbUserData.username;
+//             req.session.loggedIn = true;
+
+//             res.json({ user: dbUserData, message: 'You successfully signed up!' });
+//         });
+//     });
+// });
+
 router.post('/logout', (req, res) => {
     if (req.session.loggedIn) {
         req.session.destroy(() => {

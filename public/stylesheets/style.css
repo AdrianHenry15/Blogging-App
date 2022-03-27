@@ -42,6 +42,11 @@ p {
     font-size: 1.2rem;
 }
 
+form {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
 .btn {
     font-size: 1.3rem;
     text-decoration: none;
@@ -58,12 +63,15 @@ p {
     transform: translate(-1px, -1px);
 }
 
+
 .btn:hover {
     color: var(--primary);
     background-color: var(--tertiary);
     transform: translate(0, 0);
     box-shadow: 2px 2px var(--dark);
 }
+
+
 
 .btn-inline {
     display: inline;
@@ -102,23 +110,43 @@ p {
     max-width: 75%;
 }
 
-#login, #logout {
+#login, #logout, #sign-up, #home, #dashboard, #edit-post {
+    display: inline;
+    padding: 4px 40px 4px 40px;
+    font-size: 1.2rem;
     text-decoration: none;
-    font-size: 1rem;
-    background-color: var(--primary);
-    color: var(--dark);
-    border-radius: var(--border-radius);
-    padding: 0 47px;
+    color: var(--secondary);
     
 }
-.app-title {
-    font-size: 3rem;
-    background-color: var(--primary);
-    color: var(--dark);
-    padding: 0 10px;
-    display: inline-block;
+
+#home:hover {
+    background-color: var(--light-dark);
     border-radius: var(--border-radius);
-    box-shadow: 6px 5px var(--light-dark);
+    display: inline-block;
+}
+
+#dashboard:hover {
+    background-color: var(--light-dark);
+    border-radius: var(--border-radius);
+    display: inline-block;
+}
+
+#login:hover {
+    background-color: var(--light-dark);
+    border-radius: var(--border-radius);
+    display: inline-block;
+}
+
+#logout:hover {
+    background-color: var(--light-dark);
+    border-radius: var(--border-radius);
+    display: inline-block;
+}
+
+#sign-up:hover {
+    background-color: var(--light-dark);
+    border-radius: var(--border-radius);
+    display: inline-block;
 }
 
 #dashboard-link {
@@ -133,12 +161,6 @@ p {
     padding: 0 10px;
 }
 
-#login:hover {
-    background-color: var(--light-dark);
-    border-radius: var(--border-radius);
-    display: inline-block;
-}
-
 li {
     margin: 0 0 20px 0;
     border: 3px solid var(--dark);
@@ -147,15 +169,25 @@ li {
 
 .post {
     color: var(--primary);
-    background-color: var(--dark);
+    background-color: var(--tertiary);
     padding: 1%;
     border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
 }
 
 .meta {
-    margin: 0 0 20px 0;
+    margin: 0 0 10px 0;
     border: 3px solid var(--dark);
     border-radius: var(--border-radius);
+}
+
+.app-title {
+    font-size: 3rem;
+    background-color: var(--primary);
+    color: var(--dark);
+    padding: 0 10px;
+    display: inline-block;
+    border-radius: var(--border-radius);
+    box-shadow: 6px 5px var(--light-dark);
 }
 
 .list-group {
@@ -190,6 +222,14 @@ li {
 .icon-success {
     color: rgb(29, 153, 255);
 }
+
+footer {
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    font-size: 110%;
+   }
 
 
 /* CARDS */
