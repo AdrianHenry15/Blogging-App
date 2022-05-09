@@ -1,4 +1,4 @@
-# Blogging Application
+# Blogging App
 # Description
 This is a blog-style application where Web Developer's can create an account, make posts, edit posts, and comment on other user's posts.
  # Table of Contents
